@@ -1,4 +1,4 @@
-SELECT CODFILIAL AS CODFILIAL,
+SELECT CODFILIAL,
        CODCONTA,
        DESCRICAO,
        CASE
@@ -25,7 +25,7 @@ FROM   (SELECT CODTMV,
                        CASE
                          WHEN :DATAINICIO >= '01/01/2017' THEN TRUNC(SUM(VALORTOTAL_Atual), 2)
                          ELSE TRUNC(SUM(VALORTOTAL), 2)
-                       END AS VALORTOTAL,
+                       END AS VALORTOTAL,                       
                        CODFILIAL,
                        CODLOC
                 FROM   (SELECT CODTMV,
