@@ -1,0 +1,6 @@
+1 - entrada
+1.2 - entradas com NF 
+2 - saída
+2.2 - saída com NF 
+3 - transferência
+4 - ajuste de estoque
