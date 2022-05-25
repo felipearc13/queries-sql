@@ -167,6 +167,7 @@ FROM   (SELECT CODTMV,
                                AND TRELSLD.CODFILIAL <= :CODFILIAL_FINAL
                                AND TRELSLD.saldo = 2
                                AND TMOV.CODTMV NOT IN ( '1.1.18', '1.1.19' )
+                          
                                AND TTB4CONT.CLASSCONTA = 'ESTOQUE'
                         GROUP  BY TMOV.CODTMV,
                                   TTMV.NOME,
