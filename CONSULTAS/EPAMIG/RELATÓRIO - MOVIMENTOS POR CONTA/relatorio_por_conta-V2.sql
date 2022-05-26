@@ -17,7 +17,12 @@ FROM (
             tloc.codloc,
             tloc.nome,
             CASE
-                WHEN codtmv IN ('1.1.04', '1.1.20', '1.1.24', '1.1.41') THEN nvl(SUM(valortotal), 0)
+                WHEN codtmv IN (
+                    '1.1.04',
+                    '1.1.20',
+                    '1.1.24',
+                    '1.1.41'
+                ) THEN nvl(SUM(valortotal), 0)
             END AS baixa,
             CASE
                 WHEN codtmv = '2.2.16' THEN nvl(SUM(valortotal), 0)
@@ -28,7 +33,7 @@ FROM (
                     '2.2.07',
                     '2.2.08',
                     '2.2.21',
-                    '2.2.47 ',
+                    '2.2.47',
                     '2.2.51',
                     '2.2.54'
                 ) THEN nvl(SUM(valortotal), 0)
@@ -402,7 +407,7 @@ FROM (
                                         '2.2.07',
                                         '2.2.08',
                                         '2.2.21',
-                                        '2.2.47 ',
+                                        '2.2.47',
                                         '2.2.51',
                                         '2.2.54',
                                         '2.2.09',
