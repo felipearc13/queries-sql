@@ -8,7 +8,7 @@ SELECT
     (
         CASE
             WHEN codconta_n1 = '1.1.1.01' THEN
-                'CAIXA                                  '
+                'CAIXA'
             WHEN codconta_n1 = '1.1.1.02' THEN
                 'FUNDO FIXO'
             WHEN codconta_n1 = '1.1.1.03' THEN
