@@ -187,34 +187,5 @@ FROM (
                     CODFILIAL
             )
         GROUP BY CODFILIAL
-        UNION
-        (
-            SELECT tmov.codfilial,
-                trunc(nvl(Sum(VALORBRUTOITEM), 0), 2) *(-1)
-            FROM tmov
-                JOIN titmmov ON (tmov.idmov = titmmov.idmov)
-            WHERE codtmv IN ('4.1.03')
-                AND tmov.DATAMOVIMENTO > '31/12/2019'
-                AND tmov.DATAMOVIMENTO < :DATAINICIO
-                AND TMOV.CODLOC = :CODLOC1
-                AND TMOV.CODFILIAL = :CODFILIAL1
-                AND TMOV.STATUS <> 'C'
-            GROUP BY tmov.codfilial,
-                tmov.codtmv
-        )
-        UNION
-        (
-            SELECT tmov.codfilial,
-                trunc(nvl(Sum(VALORBRUTOITEM), 0), 2)
-            FROM tmov
-                JOIN titmmov ON (tmov.idmov = titmmov.idmov)
-            WHERE codtmv IN ('4.1.04')
-                AND tmov.DATAMOVIMENTO > '31/12/2019'
-                AND tmov.DATAMOVIMENTO < :DATAINICIO
-                AND TMOV.CODLOC = :CODLOC1
-                AND TMOV.CODFILIAL = :CODFILIAL1
-            GROUP BY tmov.codfilial,
-                tmov.codtmv
-        )
     )
 GROUP BY CODFILIAL
