@@ -1,19 +1,27 @@
 SELECT
-    SUM(valoranterior_2019 + valoranterior_2020)
+    codfilial,
+    codloc,
+    SUM(valoranterior_2019 + valoranterior_2020) AS valortotal
 FROM
     (/* Saldo Final de Dez 2019 */
         SELECT
+            codtmv,
+            codloc,
+            codfilial,
             trunc(SUM(valortotal), 2) AS valoranterior_2019,
             0                         AS valoranterior_2020
         FROM
             (
                 SELECT
+                    codtmv,
+                    codloc,
                     codfilial,
                     trunc(SUM(valortotal_atual), 2) AS valortotal
                 FROM
                     (
                         SELECT
                             codtmv,
+                            codloc,
                             (
                                 CASE
                                     WHEN codtmv IN ( '1.2.02', '1.2.09', '1.2.61', '1.2.63', '1.2.23',
@@ -133,37 +141,49 @@ FROM
                                     tmov.codfilial
                                 ORDER BY
                                     codtmv,
+                                    codloc,
                                     idmov,
                                     idprd
                             )
                         GROUP BY
                             codtmv,
+                            codloc,
                             idmov,
                             idprd,
                             codfilial
                     )
                 GROUP BY
+                    codtmv,
+                    codloc,
                     codfilial
             )
         GROUP BY
+            codtmv,
+            codloc,
             codfilial
     
 /* Saldo a partir jan 2020 */
 
         UNION
         SELECT
+            codtmv,
+            codloc,
+            codfilial,
             0                         AS valoranterior_2019,
             trunc(SUM(valortotal), 2) AS valoranterior_2020
         FROM
             (
                 SELECT
+                    codtmv,
+                    codloc,
                     codfilial,
                     trunc(SUM(valortotal_atual), 2) AS valortotal
-            /*CASE WHEN TO_CHAR(:DATAINICIO, 'DD/MM/YYYY') >='01/01/2017' THEN trunc(Sum(VALORTOTAL_Atual),2) ELSE trunc(Sum(VALORTOTAL),2) END  AS VALORTOTAL*/
+             /*CASE WHEN TO_CHAR(:DATAINICIO, 'DD/MM/YYYY') >='01/01/2017' THEN trunc(Sum(VALORTOTAL_Atual),2) ELSE trunc(Sum(VALORTOTAL),2) END  AS VALORTOTAL*/
                 FROM
                     (
                         SELECT
                             codtmv,
+                            codloc,
                             (
                                 CASE
                                     WHEN codtmv IN ( '1.2.02', '1.2.09', '1.2.61', '1.2.63', '1.2.23',
@@ -292,13 +312,21 @@ FROM
                             )
                         GROUP BY
                             codtmv,
+                            codloc,
                             idmov,
                             idprd,
                             codfilial
                     )
                 GROUP BY
+                    codtmv,
+                    codloc,
                     codfilial
             )
         GROUP BY
+            codtmv,
+            codloc,
             codfilial
     )
+GROUP BY
+    codfilial,
+    codloc
