@@ -1,14 +1,12 @@
         SELECT
             codfilial,
             nomefantasia,
-            codfilial
-            || ' - '
-            || nomefantasia              AS filial,
+            codfilial,
+            nomefantasia,
             codloc,
             nome,
-            codloc
-            || ' - '
-            || nome                      AS estoque,
+            codloc,
+            nome,
             descricao,
             codconta,
             (
