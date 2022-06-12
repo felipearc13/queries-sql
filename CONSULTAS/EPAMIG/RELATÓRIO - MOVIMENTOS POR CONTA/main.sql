@@ -764,13 +764,6 @@ FROM
                                                     RIGHT JOIN u_cfl8u4_rm.tloc ON tloc.codcoligada = trelsld.codcoligada
                                                                                    AND tloc.codfilial = trelsld.codfilial
                                                                                    AND tloc.codloc = trelsld.codloc
-
-                               /* WHERE  TRELSLD.DATAMOVIMENTO >= :DATAINICIO
-                                       AND TRELSLD.DATAMOVIMENTO <= :DATAFIM
-                                       AND TRELSLD.CODLOC >= :CODLOC_INICIAL
-                                       AND TRELSLD.CODLOC <= :CODLOC_FINAL
-                                       AND TRELSLD.CODFILIAL >= :CODFILIAL_INICIAL
-                                       AND TRELSLD.CODFILIAL <= :CODFILIAL_FINAL */
                                                 WHERE
                                                         trelsld.datamovimento >= :datainicio
                                                     AND trelsld.datamovimento <= :datafim
