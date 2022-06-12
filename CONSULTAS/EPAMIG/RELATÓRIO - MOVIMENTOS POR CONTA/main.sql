@@ -438,10 +438,10 @@ FROM
                     tab5
                 WHERE
                         datamovimento < '01/01/2020'
-                    AND codloc >= '01.001.01'
-                    AND codloc <= '99.999.99'
-                    AND codfilial >= 1
-                    AND codfilial <= 1
+                    AND codloc >= :codloc_inicial
+                    AND codloc <= :codloc_final
+                    AND codfilial >= :codfilial_inicial
+                    AND codfilial <= :codfilial_final
                 UNION
 /* A PARTIR DE JANEIRO DE 2020 */
                 SELECT
@@ -467,11 +467,11 @@ FROM
                     tab5
                 WHERE
                         datamovimento > '31/12/2019'
-                    AND datamovimento < :datainicio
-                    AND codloc >= '01.001.01'
-                    AND codloc <= '99.999.99'
-                    AND codfilial >= 1
-                    AND codfilial <= 1
+                    AND datamovimento <= :datainicio
+                    AND codloc >= :codloc_inicial
+                    AND codloc <= :codloc_final
+                    AND codfilial >= :codfilial_inicial
+                    AND codfilial <= :codfilial_final
             ) tab6
         GROUP BY
             tab6.filial,
@@ -593,7 +593,7 @@ FROM
                                     tab2.codconta_1,
                                     CASE
                          /*  WHEN '01/12/2021' >= '01/01/2017'*/
-                                        WHEN '01/12/2021' >= '01/01/2017' THEN
+                                        WHEN :datainicio >= '01/01/2017' THEN
                                             trunc(SUM(valortotal_atual), 2)
                                         ELSE
                                             trunc(SUM(valortotal), 2)
@@ -772,12 +772,12 @@ FROM
                                        AND TRELSLD.CODFILIAL >= :CODFILIAL_INICIAL
                                        AND TRELSLD.CODFILIAL <= :CODFILIAL_FINAL */
                                                 WHERE
-                                                        trelsld.datamovimento >= '01/12/2021'
-                                                    AND trelsld.datamovimento < '31/12/2021'
-                                                    AND trelsld.codloc >= '01.001.01'
-                                                    AND trelsld.codloc <= '99.999.99'
-                                                    AND trelsld.codfilial >= 1
-                                                    AND trelsld.codfilial <= 1
+                                                        trelsld.datamovimento >= :datainicio
+                                                    AND trelsld.datamovimento <= :datafim
+                                                    AND trelsld.codloc >= :codloc_inicial
+                                                    AND trelsld.codloc <= :codloc_final
+                                                    AND trelsld.codfilial >= :codfilial_inicial
+                                                    AND trelsld.codfilial <= :codfilial_final
                                                     AND trelsld.saldo = 2
                                                     AND tmov.codtmv IN ( '1.1.04', '1.1.13', '1.1.20', '1.1.21', '1.1.22',
                                                                          '1.1.24', '1.1.40', '1.1.41', '1.2.02', '1.2.07',
