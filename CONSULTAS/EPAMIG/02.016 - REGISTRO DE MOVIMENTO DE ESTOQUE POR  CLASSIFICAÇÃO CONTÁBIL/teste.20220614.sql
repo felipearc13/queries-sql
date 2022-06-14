@@ -1,44 +1,37 @@
-SELECT 
-SUM(VALORTOTAL)
-FROM
-(SELECT
+SELECT
     tab3.codtmv,
     tab3.idmov,
     tab3.codfilial,
-    tab3.codloc     AS codloc_1,
-    SUM(valortotal) AS valortotal
-FROM /* OK */
+    tab3.codloc,
+    tab3.nomeloc,
+    nvl(SUM(valortotal), 0) AS total,
+    tab3.nomefilial,
+    tab3.codconta_1,
+    tab3.codconta,
+    tab3.descricao
+FROM
     (
         SELECT
+            tab2.codtmv,
+            tab2.idmov,
+            CASE
+                WHEN :datainicio >= '01/01/2017' THEN
+                    trunc(SUM(valortotal_atual), 2)
+                ELSE
+                    trunc(SUM(valortotal), 2)
+            END AS valortotal,
             tab2.codfilial,
+            tab2.codloc,
+            tab2.nomeloc,
             tab2.nomefilial,
             tab2.codconta_1,
             tab2.codconta,
-            tab2.descricao,
-            tab2.codtmv,
-            tab2.idmov,
-            tab2.idnat,
-            tab2.codloc,
-            tab2.nomeloc,
-            CASE
-                WHEN :datainicio >= '01/01/2017' THEN
-                    trunc(SUM(tab2.valortotal_atual), 2)
-                ELSE
-                    trunc(SUM(tab2.valortotal), 2)
-            END AS valortotal
-        FROM /* ok */
+            tab2.descricao
+        FROM
             (
                 SELECT
-                    tab1.codfilial,
-                    tab1.nomefilial,
-                    tab1.codconta_1,
-                    tab1.codconta,
-                    tab1.descricao,
                     tab1.codtmv,
                     tab1.idmov,
-                    tab1.idnat,
-                    tab1.codloc,
-                    tab1.nomeloc,
                     (
                         CASE
                             WHEN codtmv IN ( '1.2.02', '1.2.09', '1.2.61', '1.2.63', '1.2.23',
@@ -162,25 +155,36 @@ FROM /* OK */
                             ELSE
                                 SUM(valorbrutoitem)
                         END
-                    ) AS valortotal_atual
-                FROM /* OK */
+                    ) AS valortotal_atual,
+                    tab1.codfilial,
+                    tab1.codloc,
+                    tab1.nomeloc,
+                    tab1.nomefilial,
+                    tab1.codconta_1,
+                    tab1.codconta,
+                    tab1.descricao
+                FROM
                     (
                         SELECT
+                            tmov.codtmv,
+                            tprd.codigoprd,
+                            trelsld.idmov,
+                            SUM(trelsld.valorfincomsinal)  AS valorfincomsinal,
+                            round(trelsld.totalsaida, 2)   AS totalsaida,
+                            round(trelsld.totalentrada, 2) AS totalentrada,
+                            titmmov.valorbrutoitem,
+                            trelsld.qtdesaida,
+                            trelsld.customeditem,
+                            trelsld.idprd,
+                            trelsld.nseqitmmov,
+                            trelsld.codloc,
+                            tloc.nome                      AS nomeloc,
                             tmov.codfilial,
                             tmov.idnat,
                             gfilial.nomefantasia           AS nomefilial,
                             substr(cconta.codconta, 1, 8)  AS codconta_1,
                             cconta.codconta,
-                            cconta.descricao,
-                            tmov.codtmv,
-                            trelsld.idmov,
-                            titmmov.valorbrutoitem,
-                            trelsld.nseqitmmov,
-                            tloc.codloc,
-                            tloc.nome                      AS nomeloc,
-                            round(trelsld.totalsaida, 2)   AS totalsaida,
-                            round(trelsld.totalentrada, 2) AS totalentrada,
-                            SUM(trelsld.valorfincomsinal)  AS valorfincomsinal
+                            cconta.descricao
                         FROM
                             u_cfl8u4_rm.trelsld
                             LEFT JOIN u_cfl8u4_rm.tmov ON trelsld.idmov = tmov.idmov
@@ -204,6 +208,8 @@ FROM /* OK */
                             AND trelsld.codfilial >= :codfilial_inicial
                             AND trelsld.codfilial <= :codfilial_final
                             AND trelsld.saldo = 2
+                            AND tmov.idmov <> 595328
+                            AND tmov.idmov = 586243
                             AND tmov.codtmv IN ( '1.1.04', '1.1.13', '1.1.20', '1.1.21', '1.1.22',
                                                  '1.1.24', '1.1.40', '1.1.41', '1.2.02', '1.2.07',
                                                  '1.2.09', '1.2.17', '1.2.23', '1.2.24', '1.2.28',
@@ -216,62 +222,60 @@ FROM /* OK */
                             AND ttb4cont.classconta = 'ESTOQUE'
                             AND length(tloc.codloc) = 9
                         GROUP BY
-                            gfilial.nomefantasia,
-                            cconta.codconta,
-                            cconta.descricao,
                             tmov.codtmv,
                             trelsld.idprd,
                             tmov.idmov,
-                            tmov.idnat,
+                            trelsld.idprd,
                             titmmov.valorbrutoitem,
+                            trelsld.qtdesaida,
+                            trelsld.customeditem,
+                            tprd.codigoprd,
                             trelsld.totalsaida,
                             trelsld.totalentrada,
                             trelsld.nseqitmmov,
                             trelsld.idmov,
-                            tloc.codloc,
+                            trelsld.codloc,
+                            tmov.codfilial,
                             tloc.nome,
-                            tmov.codfilial
+                            tmov.idnat,
+                            gfilial.nomefantasia,
+                            cconta.codconta,
+                            cconta.descricao
                         ORDER BY
                             tmov.codtmv,
-                            tmov.idmov
+                            tmov.idmov,
+                            trelsld.idprd
                     ) tab1
-                    /* OK */
                 GROUP BY
+                    tab1.codtmv,
+                    tab1.idmov,
+                    tab1.idprd,
                     tab1.codfilial,
+                    tab1.codloc,
+                    tab1.nomeloc,
                     tab1.nomefilial,
                     tab1.codconta_1,
                     tab1.codconta,
-                    tab1.descricao,
-                    tab1.codtmv,
-                    tab1.idmov,
-                    tab1.idnat,
-                    tab1.codloc,
-                    tab1.nomeloc
+                    tab1.descricao
             ) tab2
-            /* OK */
         GROUP BY
+            tab2.codtmv,
+            tab2.idmov,
             tab2.codfilial,
+            tab2.codloc,
+            tab2.nomeloc,
             tab2.nomefilial,
             tab2.codconta_1,
             tab2.codconta,
-            tab2.descricao,
-            tab2.codtmv,
-            tab2.idmov,
-            tab2.idnat,
-            tab2.codloc,
-            tab2.nomeloc
+            tab2.descricao
     ) tab3
-    /* OK */
-    RIGHT JOIN u_cfl8u4_rm.cconta ON cconta.codconta = tab3.codconta_1
-WHERE
-    tab3.valortotal IS NOT NULL
 GROUP BY
     tab3.codtmv,
     tab3.idmov,
     tab3.codfilial,
-    tab3.codloc    
-ORDER BY
-    tab3.codtmv,
-    tab3.idmov,
-    tab3.codfilial,
-    tab3.codloc )
+    tab3.codloc,
+    tab3.nomeloc,
+    tab3.nomefilial,
+    tab3.codconta_1,
+    tab3.codconta,
+    tab3.descricao

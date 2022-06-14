@@ -1,4 +1,6 @@
-SELECT
+SELECT SUM(total)
+FROM
+(SELECT
     codtmv,
     idmov,
     tloc.codfilial,
@@ -162,7 +164,7 @@ FROM
                             customeditem,
                             trelsld.idprd,
                             trelsld.nseqitmmov,
-                            trelsld.codloc,
+                            
                             tmov.codfilial
                         FROM
                                  u_cfl8u4_rm.trelsld
@@ -179,6 +181,7 @@ FROM
                             AND trelsld.codfilial >= :codfilial_inicial
                             AND trelsld.codfilial <= :codfilial_final
                             AND trelsld.saldo = 2
+                            AND tmov.idmov <> 595328
                             AND tmov.codtmv IN ( '1.1.04', '1.1.13', '1.1.20', '1.1.21', '1.1.22',
                                                  '1.1.24', '1.1.40', '1.1.41', '1.2.02', '1.2.07',
                                                  '1.2.09', '1.2.17', '1.2.23', '1.2.24', '1.2.28',
@@ -279,4 +282,4 @@ ORDER BY
     codtmv,
     idmov,
     tloc.codfilial,
-    tloc.codloc
+    tloc.codloc)
