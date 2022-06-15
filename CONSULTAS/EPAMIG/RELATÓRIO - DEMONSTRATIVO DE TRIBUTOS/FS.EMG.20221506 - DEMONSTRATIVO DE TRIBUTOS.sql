@@ -33,3 +33,8 @@ ORDER BY
     fcfo.nome,
     fcfo.cgccfo,
     titmmov.codccusto
+
+
+
+    git config --global user.name "felipearc13"
+$ git config --global user.email felipesilva1302@gmail.com
