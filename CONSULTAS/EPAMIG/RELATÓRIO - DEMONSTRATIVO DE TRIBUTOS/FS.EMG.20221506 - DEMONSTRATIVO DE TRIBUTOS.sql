@@ -36,5 +36,3 @@ ORDER BY
 
 
 
-    git config --global user.name "felipearc13"
-$ git config --global user.email felipesilva1302@gmail.com
