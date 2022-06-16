@@ -1,4 +1,0 @@
-https://docs.oracle.com/en/solutions/machine-learning-sandbox/configuring-your-system1.html#GUID-1B72D0BE-4C78-4624-B5DD-DC1479E4AC80
-ssh -i C:/ssh-key-2022-06-08.key ubuntu@168.138.146.51
-https://168.138.146.51:8888/
-10121687600
