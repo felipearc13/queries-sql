@@ -1,0 +1,4 @@
+SELECT codtb1fat AS CODIGO,
+       DESCRICAO
+FROM   U_CFL8U4_RM.ttb1
+ORDER  BY 1 
