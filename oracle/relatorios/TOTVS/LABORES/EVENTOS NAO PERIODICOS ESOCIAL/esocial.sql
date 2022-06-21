@@ -32,12 +32,9 @@ FROM
             tipoevento <> 'S-2190'
         UNION
         SELECT
-            CASE
-                WHEN pfunc.chapa IS NULL THEN
-                    'Reg. Pre. sem chapa'
-                ELSE
-                    pfunc.chapa
-            END                             AS chapa,
+            
+                    NVL(pfunc.chapa,'Registro Preliminar sem chapa')
+                                      AS chapa,
             ppessoa.nome,
             pfunc.dataadmissao              AS admissao,
             pfunc.datademissao              AS demissao,
