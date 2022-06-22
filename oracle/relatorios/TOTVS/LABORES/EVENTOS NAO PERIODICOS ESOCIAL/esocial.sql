@@ -1,6 +1,34 @@
 SELECT
-    tab1.tipoevento,
-    tab1.status,
+    tab1.tipoevento         AS evento,
+    to_char(tab1.status)    AS status#,
+    CASE
+        WHEN tab1.status = 0  THEN
+            '0-Pendente'
+        WHEN tab1.status = 1  THEN
+            '1-Gerado'
+        WHEN tab1.status = 2  THEN
+            '2-Erro no Geração'
+        WHEN tab1.status = 3  THEN
+            '3-Enviado'
+        WHEN tab1.status = 4  THEN
+            '4-Aceito TAF'
+        WHEN tab1.status = 5  THEN
+            '5-Erro na integração'
+        WHEN tab1.status = 6  THEN
+            '6-Rejeitado TAF'
+        WHEN tab1.status = 7  THEN
+            '7-Cancelado'
+        WHEN tab1.status = 8  THEN
+            '8-Retificado'
+        WHEN tab1.status = 9  THEN
+            '9-Rejeitado RET'
+        WHEN tab1.status = 10 THEN
+            '10-Aceito RET'
+        WHEN tab1.status = 11 THEN
+            '11-Excluido RET'
+        ELSE
+            tab1.status
+    END                     AS status,
     tab1.id,
     tab1.chapa,
     tab1.nome,
@@ -32,14 +60,12 @@ FROM
             tipoevento <> 'S-2190'
         UNION
         SELECT
-            
-                    NVL(pfunc.chapa,'Registro Preliminar sem chapa')
-                                      AS chapa,
+            nvl(pfunc.chapa, 'Registro Preliminar sem chapa') AS chapa,
             ppessoa.nome,
-            pfunc.dataadmissao              AS admissao,
-            pfunc.datademissao              AS demissao,
+            pfunc.dataadmissao                                AS admissao,
+            pfunc.datademissao                                AS demissao,
             pesocialeventos.tipoevento,
-            to_char(pesocialeventos.status) AS status,
+            to_char(pesocialeventos.status)                   AS status,
             id,
             pfunc.codsecao,
             dataevento,
@@ -56,7 +82,19 @@ FROM
     LEFT JOIN u_cfl8u4_rm.psecao ON tab1.codsecao = psecao.codigo
     LEFT JOIN u_cfl8u4_rm.gfilial ON psecao.codfilial = gfilial.codfilial
 WHERE
-    tipoevento LIKE /*'S-2190'*/ '%%'
+    tab1.tipoevento LIKE :evento
+    AND to_char(tab1.status) LIKE :status
+    AND tab1.id LIKE :id
+    AND tab1.chapa LIKE :chapa
+    AND tab1.nome LIKE :nome
+    AND gfilial.codfilial >= :filial_ini
+    AND gfilial.codfilial <= :filial_fim
+    AND tab1.admissao >= :adm_ini
+    AND tab1.admissao <= :adm_fim
+    AND tab1.dt_evento >= :data_evento_ini
+    AND tab1.dt_evento <= :data_evento_fim
+    AND tab1.dt_envio >= :data_envio_ini
+    AND tab1.dt_envio <= :data_envio_fim
 ORDER BY
     tab1.tipoevento,
     tab1.status,
