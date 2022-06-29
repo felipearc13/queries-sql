@@ -13,6 +13,8 @@ SELECT
 FROM
     u_cfl8u4_rm.rrptreport
     LEFT JOIN u_cfl8u4_rm.gsistema ON rrptreport.codaplicacao = gsistema.codsistema
+WHERE
+    codigo = :codigo
 ORDER BY
     rrptreport.codaplicacao,
     rrptreport.codigo,
