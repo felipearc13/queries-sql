@@ -1,3 +1,4 @@
+SELECT *
 FROM
     u_cfl8u4_rm.pffinanc
     LEFT JOIN u_cfl8u4_rm.pevento ON pffinanc.codevento = pevento.codigo
