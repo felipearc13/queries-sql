@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-16"?>
+<FopParamsFolhaAnalitica z:Id="i1" xmlns="http://www.totvs.com.br/RM/" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+  <ActionModule xmlns="http://www.totvs.com/">P</ActionModule>
+  <ActionName xmlns="http://www.totvs.com/">FopFolhaAnaliticaAction</ActionName>
+  <CanParallelize xmlns="http://www.totvs.com/">true</CanParallelize>
+  <CanSendMail xmlns="http://www.totvs.com/">false</CanSendMail>
+  <CanWaitSchedule xmlns="http://www.totvs.com/">false</CanWaitSchedule>
+  <CodUsuario xmlns="http://www.totvs.com/">felipe.silva</CodUsuario>
+  <ConnectionId xmlns="http://www.totvs.com/">CorporeRM</ConnectionId>
+  <ConnectionString i:nil="true" xmlns="http://www.totvs.com/" />
+  <Context z:Id="i2" xmlns="http://www.totvs.com/" xmlns:a="http://www.totvs.com.br/RM/">
+    <a:_params xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$EXERCICIOFISCAL</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODLOCPRT</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODTIPOCURSO</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$EDUTIPOUSR</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODUNIDADEBIB</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODCOLIGADA</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$RHTIPOUSR</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">01</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODIGOEXTERNO</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODSISTEMA</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">P</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODUSUARIOSERVICO</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema" />
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODUSUARIO</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">felipe.silva</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$IDPRJ</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">-1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CHAPAFUNCIONARIO</b:Key>
+        <b:Value i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">012750</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+      <b:KeyValueOfanyTypeanyType>
+        <b:Key i:type="c:string" xmlns:c="http://www.w3.org/2001/XMLSchema">$CODFILIAL</b:Key>
+        <b:Value i:type="c:int" xmlns:c="http://www.w3.org/2001/XMLSchema">1</b:Value>
+      </b:KeyValueOfanyTypeanyType>
+    </a:_params>
+    <a:Environment>DotNet</a:Environment>
+  </Context>
+  <CustomData i:nil="true" xmlns="http://www.totvs.com/" />
+  <DisableIsolateProcess xmlns="http://www.totvs.com/">false</DisableIsolateProcess>
+  <DriverType xmlns="http://www.totvs.com/">RM.Lib.Data.OracleDriver</DriverType>
+  <ExecutionId xmlns="http://www.totvs.com/">ecec2670-e4be-4443-a21d-e48d120d4247</ExecutionId>
+  <FailureMessage xmlns="http://www.totvs.com/">Falha na execução do processo</FailureMessage>
+  <FriendlyLogs i:nil="true" xmlns="http://www.totvs.com/" />
+  <HideProgressDialog xmlns="http://www.totvs.com/">false</HideProgressDialog>
+  <HostName xmlns="http://www.totvs.com/">epmg94</HostName>
+  <Initialized xmlns="http://www.totvs.com/">true</Initialized>
+  <Ip xmlns="http://www.totvs.com/">10.0.2.8</Ip>
+  <IsolateProcess xmlns="http://www.totvs.com/">false</IsolateProcess>
+  <JobID xmlns="http://www.totvs.com/">
+    <Children />
+    <ExecID>1</ExecID>
+    <ID>1168278</ID>
+    <IsPriorityJob>false</IsPriorityJob>
+  </JobID>
+  <JobServerHostName xmlns="http://www.totvs.com/">125371-core-instance-N-RM-D-CFL8U4-1-05a34bWIN-Z2</JobServerHostName>
+  <MasterActionName i:nil="true" xmlns="http://www.totvs.com/" />
+  <MaximumQuantityOfPrimaryKeysPerProcess xmlns="http://www.totvs.com/">1000</MaximumQuantityOfPrimaryKeysPerProcess>
+  <MinimumQuantityOfPrimaryKeysPerProcess xmlns="http://www.totvs.com/">1</MinimumQuantityOfPrimaryKeysPerProcess>
+  <NetworkUser xmlns="http://www.totvs.com/">felipe.silva</NetworkUser>
+  <NotifyEmail xmlns="http://www.totvs.com/">false</NotifyEmail>
+  <NotifyEmailList i:nil="true" xmlns="http://www.totvs.com/" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <NotifyFluig xmlns="http://www.totvs.com/">false</NotifyFluig>
+  <OnlineMode xmlns="http://www.totvs.com/">false</OnlineMode>
+  <PrimaryKeyList xmlns="http://www.totvs.com/" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <PrimaryKeyNames i:nil="true" xmlns="http://www.totvs.com/" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <PrimaryKeyTableName i:nil="true" xmlns="http://www.totvs.com/" />
+  <ProcessName xmlns="http://www.totvs.com/">Folha Analítica</ProcessName>
+  <QuantityOfSplits xmlns="http://www.totvs.com/">0</QuantityOfSplits>
+  <SaveLogInDatabase xmlns="http://www.totvs.com/">true</SaveLogInDatabase>
+  <SaveParamsExecution xmlns="http://www.totvs.com/">true</SaveParamsExecution>
+  <ScheduleDateTime xmlns="http://www.totvs.com/">2022-07-01T14:14:07.3692244-03:00</ScheduleDateTime>
+  <Scheduler xmlns="http://www.totvs.com/">JobMonitor</Scheduler>
+  <SendMail xmlns="http://www.totvs.com/">false</SendMail>
+  <ServerName xmlns="http://www.totvs.com/">FopFolhaAnaliticaProcess</ServerName>
+  <ServiceInterface i:nil="true" xmlns="http://www.totvs.com/" xmlns:a="http://schemas.datacontract.org/2004/07/System" />
+  <ShouldParallelize xmlns="http://www.totvs.com/">false</ShouldParallelize>
+  <ShowReExecuteButton xmlns="http://www.totvs.com/">true</ShowReExecuteButton>
+  <StatusMessage i:nil="true" xmlns="http://www.totvs.com/" />
+  <SuccessMessage xmlns="http://www.totvs.com/">Processo executado com sucesso</SuccessMessage>
+  <SyncExecution xmlns="http://www.totvs.com/">false</SyncExecution>
+  <UseJobMonitor xmlns="http://www.totvs.com/">true</UseJobMonitor>
+  <UserName xmlns="http://www.totvs.com/">felipe.silva</UserName>
+  <WaitSchedule xmlns="http://www.totvs.com/">false</WaitSchedule>
+  <ArquivoPath>c:\users\felipe.silva\desktop</ArquivoPath>
+  <ArquivoRelatorio>
+    <ArquivoColigada z:Id="i3">
+      <Coligada>1</Coligada>
+      <Guid>3e7f1230-6069-4c82-a738-047a4f720b2e</Guid>
+      <GuidList i:nil="true" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <NomeArquivo i:nil="true" />
+      <OrdemArquivoTomador>0</OrdemArquivoTomador>
+    </ArquivoColigada>
+  </ArquivoRelatorio>
+  <CodigoColigada>0</CodigoColigada>
+  <CodigoRelatorio>FOPREL0009</CodigoRelatorio>
+  <CodigoRelatorioTxt>FOPRELFATXT</CodigoRelatorioTxt>
+  <CodigoUsuario>felipe.silva</CodigoUsuario>
+  <ColigadaRelatorio>1</ColigadaRelatorio>
+  <ColigadaRelatorioTxt>1</ColigadaRelatorioTxt>
+  <DataSetGerado i:nil="true" />
+  <HouveErros>false</HouveErros>
+  <IdRelatorio>606</IdRelatorio>
+  <IdRelatorioTxt>610</IdRelatorioTxt>
+  <NomeArquivo>FolhaAnalitica.pdf</NomeArquivo>
+  <Processo>FolhaAnalitica</Processo>
+  <TerminouExecucaoProcesso>true</TerminouExecucaoProcesso>
+  <Contexto>CodSistema:P;CodUsuario:felipe.silva;CodUsuarioServico:;CodColigada:1;CodFilial:1;DataSistema:2022-7-1-0-0-0;IdPrj:-1;CodTipoCurso:-1;CodUnidadeBib:-1;CodLocPrt:-1;EduTipoUsr:-1;RhTipoUsr:01;ChapaFuncionario:012750;CodigoExterno:-1;ExercicioFiscal:1</Contexto>
+  <ExecucaoEmBackground>false</ExecucaoEmBackground>
+  <FileID xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <FopCompetenciaItem i:nil="true" />
+  <ImportarAutonomosExternos>false</ImportarAutonomosExternos>
+  <ParametrosFuncionarios z:Id="i4">
+    <ColigadaFormulaCabecalho>0</ColigadaFormulaCabecalho>
+    <DataTableFormulasSelecionadas>
+      <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+        <xs:element name="Formula" msprop:_x0024_Modified="False">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msdata:Caption="Código" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRICAO" msdata:Caption="Descrição" type="xs:string" minOccurs="0" />
+              <xs:element name="TITULO" msdata:Caption="Título" type="xs:string" minOccurs="0" />
+              <xs:element name="APLICACAO" type="xs:string" minOccurs="0" />
+              <xs:element name="CODCOLIGADA" type="xs:int" minOccurs="0" />
+              <xs:element name="ORDEMFORMULA" type="xs:short" minOccurs="0" />
+              <xs:element name="CODFORMULAENUM" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Formula" msdata:UseCurrentLocale="true">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Formula" />
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+      <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </DataTableFormulasSelecionadas>
+    <FormulaCabecalho />
+    <ResumoColuna1 />
+    <ResumoColuna2 />
+    <ResumoColuna3 />
+    <ResumoColuna4 />
+  </ParametrosFuncionarios>
+  <ParametrosImpressao z:Id="i5">
+    <BaseFuncionarioSelecionados>
+      <BaseColuna1 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+      </BaseColuna1>
+      <BaseColuna2 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BaseColuna3 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BaseColuna4 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BasesColuna1SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+        <a:string>Proventos</a:string>
+        <a:string>FGTS Dep.</a:string>
+        <a:string>FGTS 13º Dep.</a:string>
+        <a:string>FGTS Dep. (SEFIP)</a:string>
+        <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+        <a:string>FGTS Rescisão (SEFIP)</a:string>
+        <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+        <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+        <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+        <a:string>Base FGTS</a:string>
+        <a:string>Base FGTS 13º</a:string>
+        <a:string>Base FGTS (SEFIP)</a:string>
+        <a:string>Base FGTS 13º (SEFIP)</a:string>
+        <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS Afast.</a:string>
+        <a:string>Base FGTS Ativos</a:string>
+        <a:string>Base FGTS 13º Ativos</a:string>
+        <a:string>Base FGTS Demitidos</a:string>
+        <a:string>Base FGTS 13º Demitidos</a:string>
+        <a:string>Base FGTS Resc.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+      </BasesColuna1SelecionadasList>
+      <BasesColuna2SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Descontos</a:string>
+        <a:string>INSS Empresa</a:string>
+        <a:string>INSS SAT</a:string>
+        <a:string>INSS Terceiro</a:string>
+        <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+        <a:string>INSS SAT Ajustado</a:string>
+        <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+        <a:string>INSS Segurado</a:string>
+        <a:string>Estorno INSS</a:string>
+        <a:string>Base INSS - GPS</a:string>
+        <a:string>Base INSS 13º - GPS</a:string>
+        <a:string>Base INSS Ac. Teto</a:string>
+        <a:string>Base INSS Ac. Teto 13º</a:string>
+        <a:string>Base INSS 15 Anos</a:string>
+        <a:string>Base INSS 13º 15 Anos</a:string>
+        <a:string>Base INSS 20 Anos</a:string>
+        <a:string>Base INSS 13º 20 Anos</a:string>
+        <a:string>Base INSS 25 Anos</a:string>
+        <a:string>Base INSS 13º 25 Anos</a:string>
+        <a:string>Base INSS Ñ Exp. Risco</a:string>
+        <a:string>Base INSS 13º Ñ Exp. Risco</a:string>
+        <a:string>Base INSS Auton.</a:string>
+        <a:string>Base INSS Pro-Labore</a:string>
+      </BasesColuna2SelecionadasList>
+      <BasesColuna3SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Líquido</a:string>
+        <a:string>Base IRRF</a:string>
+        <a:string>Base IRRF 13º</a:string>
+        <a:string>Base IRRF Férias</a:string>
+        <a:string>Base IRRF PLR</a:string>
+        <a:string>Base Sal. Fam.</a:string>
+        <a:string>Num. Depend. IRRF</a:string>
+      </BasesColuna3SelecionadasList>
+      <BasesColuna4SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Fórmula 1</a:string>
+        <a:string>Fórmula 2</a:string>
+        <a:string>Fórmula 3</a:string>
+        <a:string>Fórmula 4</a:string>
+        <a:string>Fórmula 5</a:string>
+        <a:string>Fórmula 6</a:string>
+        <a:string>Fórmula 7</a:string>
+        <a:string>Fórmula 8</a:string>
+        <a:string>Fórmula 9</a:string>
+        <a:string>Fórmula 10</a:string>
+        <a:string>Fórmula 11</a:string>
+        <a:string>Fórmula 12</a:string>
+        <a:string>Fórmula 13</a:string>
+        <a:string>Fórmula 14</a:string>
+        <a:string>Fórmula 15</a:string>
+      </BasesColuna4SelecionadasList>
+    </BaseFuncionarioSelecionados>
+    <BaseTotaisGeraisSelecionados>
+      <BaseColuna1 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+        <a:string>Proventos</a:string>
+        <a:string>FGTS Dep.</a:string>
+        <a:string>FGTS 13º Dep.</a:string>
+        <a:string>FGTS Dep. (SEFIP)</a:string>
+        <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+        <a:string>FGTS Rescisão (SEFIP)</a:string>
+        <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+        <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+        <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+        <a:string>Base FGTS</a:string>
+        <a:string>Base FGTS 13º</a:string>
+        <a:string>Base FGTS (SEFIP)</a:string>
+        <a:string>Base FGTS 13º (SEFIP)</a:string>
+        <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS Afast.</a:string>
+        <a:string>Base FGTS Ativos</a:string>
+        <a:string>Base FGTS 13º Ativos</a:string>
+        <a:string>Base FGTS Demitidos</a:string>
+        <a:string>Base FGTS 13º Demitidos</a:string>
+        <a:string>Base FGTS Resc.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+      </BaseColuna1>
+      <BaseColuna2 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Descontos</a:string>
+        <a:string>INSS Empresa</a:string>
+        <a:string>INSS SAT</a:string>
+        <a:string>INSS Terceiro</a:string>
+        <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+        <a:string>INSS SAT Ajustado</a:string>
+        <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+        <a:string>INSS Segurado</a:string>
+        <a:string>Estorno INSS</a:string>
+        <a:string>Base INSS - GPS</a:string>
+        <a:string>Base INSS 13º - GPS</a:string>
+        <a:string>Base INSS Ac. Teto</a:string>
+        <a:string>Base INSS Ac. Teto 13º</a:string>
+        <a:string>Base INSS 15 Anos</a:string>
+        <a:string>Base INSS 13º 15 Anos</a:string>
+        <a:string>Base INSS 20 Anos</a:string>
+        <a:string>Base INSS 13º 20 Anos</a:string>
+        <a:string>Base INSS 25 Anos</a:string>
+        <a:string>Base INSS 13º 25 Anos</a:string>
+        <a:string>Base INSS Ñ Exp. Risco</a:string>
+        <a:string>Base INSS 13º Ñ Exp. Risco</a:string>
+        <a:string>Base INSS Auton.</a:string>
+        <a:string>Base INSS Pro-Labore</a:string>
+      </BaseColuna2>
+      <BaseColuna3 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Líquido</a:string>
+        <a:string>Base IRRF</a:string>
+        <a:string>Base IRRF 13º</a:string>
+        <a:string>Base IRRF Férias</a:string>
+        <a:string>Base Sal. Fam.</a:string>
+        <a:string>Num. Depend. IRRF</a:string>
+      </BaseColuna3>
+      <BaseColuna4 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BasesColuna1SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+        <a:string>Proventos</a:string>
+        <a:string>FGTS Dep.</a:string>
+        <a:string>FGTS 13º Dep.</a:string>
+        <a:string>FGTS Dep. (SEFIP)</a:string>
+        <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+        <a:string>FGTS Rescisão (SEFIP)</a:string>
+        <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+        <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+        <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+        <a:string>Base FGTS</a:string>
+        <a:string>Base FGTS 13º</a:string>
+        <a:string>Base FGTS (SEFIP)</a:string>
+        <a:string>Base FGTS 13º (SEFIP)</a:string>
+        <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS Afast.</a:string>
+        <a:string>Base FGTS Ativos</a:string>
+        <a:string>Base FGTS 13º Ativos</a:string>
+        <a:string>Base FGTS Demitidos</a:string>
+        <a:string>Base FGTS 13º Demitidos</a:string>
+        <a:string>Base FGTS Resc.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+      </BasesColuna1SelecionadasList>
+      <BasesColuna2SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Descontos</a:string>
+        <a:string>INSS Empresa</a:string>
+        <a:string>INSS SAT</a:string>
+        <a:string>INSS Terceiro</a:string>
+        <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+        <a:string>INSS SAT Ajustado</a:string>
+        <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+        <a:string>INSS Segurado</a:string>
+        <a:string>Estorno INSS</a:string>
+        <a:string>Base INSS - GPS</a:string>
+        <a:string>Base INSS 13º - GPS</a:string>
+        <a:string>Base INSS Ac. Teto</a:string>
+        <a:string>Base INSS Ac. Teto 13º</a:string>
+        <a:string>Base INSS 15 Anos</a:string>
+        <a:string>Base INSS 13º 15 Anos</a:string>
+        <a:string>Base INSS 20 Anos</a:string>
+        <a:string>Base INSS 13º 20 Anos</a:string>
+        <a:string>Base INSS 25 Anos</a:string>
+        <a:string>Base INSS 13º 25 Anos</a:string>
+        <a:string>Base INSS Ñ Exp. Risco</a:string>
+        <a:string>Base INSS 13º Ñ Exp. Risco</a:string>
+        <a:string>Base INSS Auton.</a:string>
+        <a:string>Base INSS Pro-Labore</a:string>
+      </BasesColuna2SelecionadasList>
+      <BasesColuna3SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Líquido</a:string>
+        <a:string>Base IRRF</a:string>
+        <a:string>Base IRRF 13º</a:string>
+        <a:string>Base IRRF Férias</a:string>
+        <a:string>Base IRRF PLR</a:string>
+        <a:string>Base Sal. Fam.</a:string>
+        <a:string>Num. Depend. IRRF</a:string>
+        <a:string>Fórmula 1</a:string>
+        <a:string>Fórmula 2</a:string>
+        <a:string>Fórmula 3</a:string>
+        <a:string>Fórmula 4</a:string>
+        <a:string>Fórmula 5</a:string>
+        <a:string>Fórmula 6</a:string>
+        <a:string>Fórmula 7</a:string>
+        <a:string>Fórmula 8</a:string>
+        <a:string>Fórmula 9</a:string>
+        <a:string>Fórmula 10</a:string>
+        <a:string>Fórmula 11</a:string>
+        <a:string>Fórmula 12</a:string>
+        <a:string>Fórmula 13</a:string>
+        <a:string>Fórmula 14</a:string>
+        <a:string>Fórmula 15</a:string>
+      </BasesColuna3SelecionadasList>
+      <BasesColuna4SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </BaseTotaisGeraisSelecionados>
+    <BaseTotaisSecaoSelecionados>
+      <BaseColuna1 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+      </BaseColuna1>
+      <BaseColuna2 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BaseColuna3 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BaseColuna4 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <BasesColuna1SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>FGTS Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Verde e Amarelo</a:string>
+        <a:string>FGTS Ant. Verde e Amarelo</a:string>
+        <a:string>FGTS 13º Ant. Verde/Amar.</a:string>
+        <a:string>Base FGTS Verde e Amarelo</a:string>
+        <a:string>Base FGTS 13º Verde/Amar.</a:string>
+        <a:string>Base FGTS 13º Ant. Verd.Am.</a:string>
+        <a:string>Base FGTS Ant. Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS Verde/Amar.</a:string>
+        <a:string>Ded. Base INSS 13 Ver.Ama.</a:string>
+        <a:string>Base INSS - Envelope</a:string>
+        <a:string>Base INSS 13º - Envelope</a:string>
+        <a:string>Proventos</a:string>
+        <a:string>FGTS Dep.</a:string>
+        <a:string>FGTS 13º Dep.</a:string>
+        <a:string>FGTS Dep. (SEFIP)</a:string>
+        <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+        <a:string>FGTS Rescisão (SEFIP)</a:string>
+        <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+        <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+        <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+        <a:string>Base FGTS</a:string>
+        <a:string>Base FGTS 13º</a:string>
+        <a:string>Base FGTS (SEFIP)</a:string>
+        <a:string>Base FGTS 13º (SEFIP)</a:string>
+        <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+        <a:string>Base FGTS Afast.</a:string>
+        <a:string>Base FGTS Ativos</a:string>
+        <a:string>Base FGTS 13º Ativos</a:string>
+        <a:string>Base FGTS Demitidos</a:string>
+        <a:string>Base FGTS 13º Demitidos</a:string>
+        <a:string>Base FGTS Resc.(SEFIP)</a:string>
+        <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+      </BasesColuna1SelecionadasList>
+      <BasesColuna2SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Descontos</a:string>
+        <a:string>INSS Empresa</a:string>
+        <a:string>INSS SAT</a:string>
+        <a:string>INSS Terceiro</a:string>
+        <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+        <a:string>INSS SAT Ajustado</a:string>
+        <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+        <a:string>INSS Segurado</a:string>
+        <a:string>Estorno INSS</a:string>
+        <a:string>Base INSS - GPS</a:string>
+        <a:string>Base INSS 13º - GPS</a:string>
+        <a:string>Base INSS Ac. Teto</a:string>
+        <a:string>Base INSS Ac. Teto 13º</a:string>
+        <a:string>Base INSS 15 Anos</a:string>
+        <a:string>Base INSS 13º 15 Anos</a:string>
+        <a:string>Base INSS 20 Anos</a:string>
+        <a:string>Base INSS 13º 20 Anos</a:string>
+        <a:string>Base INSS 25 Anos</a:string>
+        <a:string>Base INSS 13º 25 Anos</a:string>
+        <a:string>Base INSS Ñ Exp. Risco</a:string>
+        <a:string>Base INSS 13º Ñ Exp. Risco</a:string>
+        <a:string>Base INSS Auton.</a:string>
+        <a:string>Base INSS Pro-Labore</a:string>
+      </BasesColuna2SelecionadasList>
+      <BasesColuna3SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <a:string>Líquido</a:string>
+        <a:string>Base IRRF</a:string>
+        <a:string>Base IRRF 13º</a:string>
+        <a:string>Base IRRF Férias</a:string>
+        <a:string>Base IRRF PLR</a:string>
+        <a:string>Base Sal. Fam.</a:string>
+        <a:string>Num. Depend. IRRF</a:string>
+        <a:string>Fórmula 1</a:string>
+        <a:string>Fórmula 2</a:string>
+        <a:string>Fórmula 3</a:string>
+        <a:string>Fórmula 4</a:string>
+        <a:string>Fórmula 5</a:string>
+        <a:string>Fórmula 6</a:string>
+        <a:string>Fórmula 7</a:string>
+        <a:string>Fórmula 8</a:string>
+        <a:string>Fórmula 9</a:string>
+        <a:string>Fórmula 10</a:string>
+        <a:string>Fórmula 11</a:string>
+        <a:string>Fórmula 12</a:string>
+        <a:string>Fórmula 13</a:string>
+        <a:string>Fórmula 14</a:string>
+        <a:string>Fórmula 15</a:string>
+      </BasesColuna3SelecionadasList>
+      <BasesColuna4SelecionadasList xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </BaseTotaisSecaoSelecionados>
+    <BasesColuna1List xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Proventos</a:string>
+      <a:string>FGTS Dep.</a:string>
+      <a:string>FGTS 13º Dep.</a:string>
+      <a:string>FGTS Dep. (SEFIP)</a:string>
+      <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+      <a:string>FGTS Rescisão (SEFIP)</a:string>
+      <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+      <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+      <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+      <a:string>Base FGTS</a:string>
+      <a:string>Base FGTS 13º</a:string>
+      <a:string>Base FGTS (SEFIP)</a:string>
+      <a:string>Base FGTS 13º (SEFIP)</a:string>
+      <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+      <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+      <a:string>Base FGTS Afast.</a:string>
+      <a:string>Base FGTS Ativos</a:string>
+      <a:string>Base FGTS 13º Ativos</a:string>
+      <a:string>Base FGTS Demitidos</a:string>
+      <a:string>Base FGTS 13º Demitidos</a:string>
+      <a:string>Base FGTS Resc.(SEFIP)</a:string>
+      <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+    </BasesColuna1List>
+    <BasesColuna2List xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Descontos</a:string>
+      <a:string>INSS Empresa</a:string>
+      <a:string>INSS SAT</a:string>
+      <a:string>INSS Terceiro</a:string>
+      <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+      <a:string>INSS SAT Ajustado</a:string>
+      <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+      <a:string>INSS Segurado</a:string>
+      <a:string>Estorno INSS</a:string>
+      <a:string>Base INSS</a:string>
+      <a:string>Base INSS 13º</a:string>
+      <a:string>Base INSS Ac. Teto</a:string>
+      <a:string>Base INSS Ac. Teto 13º</a:string>
+      <a:string>Base INSS 15 Anos</a:string>
+      <a:string>Base INSS 13º 15 Anos</a:string>
+      <a:string>Base INSS 20 Anos</a:string>
+      <a:string>Base INSS 13º 20 Anos</a:string>
+      <a:string>Base INSS 25 Anos</a:string>
+      <a:string>Base INSS 13º 25 Anos</a:string>
+      <a:string>Base INSS não Exp. Risco</a:string>
+      <a:string>Base INSS 13º não Exp. Risco</a:string>
+      <a:string>Base INSS Auton.</a:string>
+      <a:string>Base INSS Pro-Labore</a:string>
+    </BasesColuna2List>
+    <BasesColuna3List xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Líquido</a:string>
+      <a:string>Base IRRF</a:string>
+      <a:string>Base IRRF 13º</a:string>
+      <a:string>Base IRRF Férias</a:string>
+      <a:string>Base IRRF PLR</a:string>
+      <a:string>Base Sal. Fam.</a:string>
+      <a:string>Num. Depend. IRRF</a:string>
+    </BasesColuna3List>
+    <BasesColuna4List xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Fórmula 1</a:string>
+      <a:string>Fórmula 2</a:string>
+      <a:string>Fórmula 3</a:string>
+      <a:string>Fórmula 4</a:string>
+      <a:string>Fórmula 5</a:string>
+      <a:string>Fórmula 6</a:string>
+      <a:string>Fórmula 7</a:string>
+      <a:string>Fórmula 8</a:string>
+      <a:string>Fórmula 9</a:string>
+      <a:string>Fórmula 10</a:string>
+      <a:string>Fórmula 11</a:string>
+      <a:string>Fórmula 12</a:string>
+      <a:string>Fórmula 13</a:string>
+      <a:string>Fórmula 14</a:string>
+      <a:string>Fórmula 15</a:string>
+    </BasesColuna4List>
+    <BasesSelecionadasColuna1 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Proventos</a:string>
+      <a:string>FGTS Dep.</a:string>
+      <a:string>FGTS 13º Dep.</a:string>
+      <a:string>FGTS Dep. (SEFIP)</a:string>
+      <a:string>FGTS 13º Dep. (SEFIP)</a:string>
+      <a:string>FGTS Rescisão (SEFIP)</a:string>
+      <a:string>FGTS 13º Rescisão (SEFIP)</a:string>
+      <a:string>FGTS Menor Apr. (SEFIP)</a:string>
+      <a:string>FGTS 13º Menor Apr. (SEFIP)</a:string>
+      <a:string>Base FGTS</a:string>
+      <a:string>Base FGTS 13º</a:string>
+      <a:string>Base FGTS (SEFIP)</a:string>
+      <a:string>Base FGTS 13º (SEFIP)</a:string>
+      <a:string>Base FGTS Menor Apr.(SEFIP)</a:string>
+      <a:string>Base FGTS 13º Menor Apr.(SEFIP)</a:string>
+      <a:string>Base FGTS Afast.</a:string>
+      <a:string>Base FGTS Ativos</a:string>
+      <a:string>Base FGTS 13º Ativos</a:string>
+      <a:string>Base FGTS Demitidos</a:string>
+      <a:string>Base FGTS 13º Demitidos</a:string>
+      <a:string>Base FGTS Resc.(SEFIP)</a:string>
+      <a:string>Base FGTS 13º Resc.(SEFIP)</a:string>
+    </BasesSelecionadasColuna1>
+    <BasesSelecionadasColuna2 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Descontos</a:string>
+      <a:string>INSS Empresa</a:string>
+      <a:string>INSS SAT</a:string>
+      <a:string>INSS Terceiro</a:string>
+      <a:string>INSS Total (Emp+SAT+Terc)</a:string>
+      <a:string>INSS SAT Ajustado</a:string>
+      <a:string>INSS (Emp+SAT_Ajust+Terc)</a:string>
+      <a:string>INSS Segurado</a:string>
+      <a:string>Estorno INSS</a:string>
+      <a:string>Base INSS</a:string>
+      <a:string>Base INSS 13º</a:string>
+      <a:string>Base INSS Ac. Teto</a:string>
+      <a:string>Base INSS Ac. Teto 13º</a:string>
+      <a:string>Base INSS 15 Anos</a:string>
+      <a:string>Base INSS 13º 15 Anos</a:string>
+      <a:string>Base INSS 20 Anos</a:string>
+      <a:string>Base INSS 13º 20 Anos</a:string>
+      <a:string>Base INSS 25 Anos</a:string>
+      <a:string>Base INSS 13º 25 Anos</a:string>
+      <a:string>Base INSS não Exp. Risco</a:string>
+      <a:string>Base INSS 13º não Exp. Risco</a:string>
+      <a:string>Base INSS Auton.</a:string>
+      <a:string>Base INSS Pro-Labore</a:string>
+    </BasesSelecionadasColuna2>
+    <BasesSelecionadasColuna3 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:string>Líquido</a:string>
+      <a:string>Base IRRF</a:string>
+      <a:string>Base IRRF 13º</a:string>
+      <a:string>Base IRRF Férias</a:string>
+      <a:string>Base Sal. Fam.</a:string>
+      <a:string>Num. Depend. IRRF</a:string>
+    </BasesSelecionadasColuna3>
+    <BasesSelecionadasColuna4 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <ColigadaFormulaCabecalho>0</ColigadaFormulaCabecalho>
+    <DescricaoPeriodo>false</DescricaoPeriodo>
+    <FolhaAnalitica13Salario>false</FolhaAnalitica13Salario>
+    <FormatoRelatorio>FolhaAnaliticaFormatoPDF</FormatoRelatorio>
+    <FormulaCabecalho />
+    <GerarComparativoSefip>false</GerarComparativoSefip>
+    <ImprimeCNPJEnderecoNoCabecalho>true</ImprimeCNPJEnderecoNoCabecalho>
+    <ImprimirBasesGerais>true</ImprimirBasesGerais>
+    <ImprimirBasesSecao>true</ImprimirBasesSecao>
+    <ImprimirCampoAssinatura>false</ImprimirCampoAssinatura>
+    <ImprimirContadoresGerais>true</ImprimirContadoresGerais>
+    <ImprimirContadoresSecao>false</ImprimirContadoresSecao>
+    <ImprimirDadosFuncionario>false</ImprimirDadosFuncionario>
+    <ImprimirDescricaoPeriodo>true</ImprimirDescricaoPeriodo>
+    <ImprimirEventosFunc>true</ImprimirEventosFunc>
+    <ImprimirEventosGerais>true</ImprimirEventosGerais>
+    <ImprimirEventosSecao>false</ImprimirEventosSecao>
+    <ImprimirIncidenciasEventos>false</ImprimirIncidenciasEventos>
+    <ImprimirLogoMarca>true</ImprimirLogoMarca>
+    <ImprimirNomeSecao>false</ImprimirNomeSecao>
+    <ImprimirResumoFunc>true</ImprimirResumoFunc>
+    <ImprimirSalarioHora>false</ImprimirSalarioHora>
+    <ImprimirSelecao>false</ImprimirSelecao>
+    <ImprimirTipoRuaNoEnderecoSecao>false</ImprimirTipoRuaNoEnderecoSecao>
+    <ImprimirTotaisGerais>true</ImprimirTotaisGerais>
+    <ImprimirTotaisSecao>false</ImprimirTotaisSecao>
+    <PercAutonomos>0.00</PercAutonomos>
+    <QuebrarPaginasPorSecao>false</QuebrarPaginasPorSecao>
+    <TituloRelatorio>RESUMO EFETIVOS S_DEMITIDOS (Per. 3)</TituloRelatorio>
+  </ParametrosImpressao>
+  <ParametrosSelecao z:Id="i6">
+    <AnoComp>2022</AnoComp>
+    <ChavesAtivas xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <a:short>0</a:short>
+      <a:short>1</a:short>
+      <a:short>2</a:short>
+      <a:short>3</a:short>
+      <a:short>4</a:short>
+      <a:short>5</a:short>
+    </ChavesAtivas>
+    <CodigoQuebra>1.08.02</CodigoQuebra>
+    <CodigoQuebraCentroCusto />
+    <ConsideraPercINSSSecaoCentralizadora>false</ConsideraPercINSSSecaoCentralizadora>
+    <DesconsideraParaFGTSDissidio>false</DesconsideraParaFGTSDissidio>
+    <FiltrarBaseFGTSAfastadosPorPeriodo>false</FiltrarBaseFGTSAfastadosPorPeriodo>
+    <ImprimirEventosTipoBase>true</ImprimirEventosTipoBase>
+    <ImprimirEventosZerados>false</ImprimirEventosZerados>
+    <ImprimirFuncionarioSemMovimentacao>false</ImprimirFuncionarioSemMovimentacao>
+    <ImprimirPorSecao>true</ImprimirPorSecao>
+    <MesCaixa>0</MesCaixa>
+    <MesComp>4</MesComp>
+    <Ordenacao>1</Ordenacao>
+    <OrdenarFuncao>false</OrdenarFuncao>
+    <OrdernarPorSecaoCentroCusto>false</OrdernarPorSecaoCentroCusto>
+    <PercEmpresa>0</PercEmpresa>
+    <PeriodoCompetencia>3</PeriodoCompetencia>
+    <SelecionadoTodosPeriodos>false</SelecionadoTodosPeriodos>
+    <TipoPeriodo>2</TipoPeriodo>
+    <UsarFiltroCentroCusto>true</UsarFiltroCentroCusto>
+    <VerificarAutonomosFluxus>false</VerificarAutonomosFluxus>
+  </ParametrosSelecao>
+  <SelColigadas>
+    <ColigadaSelecionada>
+      <AnoCaixa>2022</AnoCaixa>
+      <AnoComp>2022</AnoComp>
+      <CNPJ>17.138.140/0001-23</CNPJ>
+      <Cidade>BELO HORIZONTE</Cidade>
+      <Codigo>1</Codigo>
+      <CodigoQuebraCGC i:nil="true" />
+      <Complemento />
+      <Estado>MG</Estado>
+      <HasParams>false</HasParams>
+      <MesCaixa>5</MesCaixa>
+      <MesComp>4</MesComp>
+      <Nome>EMPRESA DE PESQUISA AGROPECUARIA DE MINAS GERAIS</Nome>
+      <NomeFantasia>EPAMIG</NomeFantasia>
+      <Numero>1647</Numero>
+      <ParametrosColigada z:Id="i7" i:type="a:FopParamsFolhasAnaliticaColigada" xmlns:a="-RM.Fop.Relatorios.Intf, Version=12.1.34.154, Culture=neutral, PublicKeyToken=null-RM.Fop.Relatorios-RM.Fop.Relatorios.FopParamsFolhasAnaliticaColigada">
+        <Chapa xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        <CodigoQuebra />
+        <CodigoQuebraCGC />
+        <Filtro>-1</Filtro>
+        <FiltroGlobaisTemporario i:nil="true" />
+        <FiltroGlobaisTemporarioParametros i:nil="true" />
+        <FiltroSQL i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        <FormulaSelecao />
+        <ParametrosFiltroUsuario i:nil="true" />
+        <ParametrosXMLSelFunc i:nil="true" />
+        <SelecaoReceb>M</SelecaoReceb>
+        <SelecaoSituacao>AEFILPTUWY</SelecaoSituacao>
+        <SelecaoTipoFunc>NZ</SelecaoTipoFunc>
+        <SelecaoTodos>false</SelecaoTodos>
+        <SlicedFilter i:nil="true" />
+        <ColigadaFormulaCabecalhoFunc>0</ColigadaFormulaCabecalhoFunc>
+        <ColigadaFormulaCabecalhoSecao>0</ColigadaFormulaCabecalhoSecao>
+        <DesconsideraParaFGTSDissidio>false</DesconsideraParaFGTSDissidio>
+        <DtFormulasFuncionario i:nil="true" />
+        <FormulaCabecalhoFunc i:nil="true" />
+        <FormulaCabecalhoSecao i:nil="true" />
+        <ParametrosSelecao z:Ref="i6" />
+        <PercEmpresa>0</PercEmpresa>
+        <Selecao>
+          <Chapa xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+          <CodRecebimento>M</CodRecebimento>
+          <CodSituacao>AEFILPTUWY</CodSituacao>
+          <CodTipo>NZ</CodTipo>
+          <Contexto z:Ref="i2" />
+          <DataFimCompetencia>2022-04-30T00:00:00</DataFimCompetencia>
+          <ExibeSituacaoAdmissaoProxMes>true</ExibeSituacaoAdmissaoProxMes>
+          <FiltroGlobais z:Id="i8">
+            <FiltroID>-1</FiltroID>
+            <NomeFiltro />
+            <Parametros />
+          </FiltroGlobais>
+          <FiltroGlobaisTemporario i:nil="true" />
+          <FiltroPerfil />
+          <FormulaSelecao />
+          <NaoPermiteCodSituacao i:nil="true" />
+          <NaoUsaCodReceb>false</NaoUsaCodReceb>
+          <NaoUsaSituacao>false</NaoUsaSituacao>
+          <NaoUsaTipoFunc>false</NaoUsaTipoFunc>
+          <SkipSecurity>false</SkipSecurity>
+          <UsaHstSituacao>false</UsaHstSituacao>
+        </Selecao>
+        <UsaParamsEspecificos>false</UsaParamsEspecificos>
+      </ParametrosColigada>
+      <Periodo>3</Periodo>
+      <ProdutorRural>false</ProdutorRural>
+      <PropColigadaSelecionadaDefinida>false</PropColigadaSelecionadaDefinida>
+      <Rua>AV. JOSE CANDIDO DA SILVEIRA</Rua>
+      <Selecionada>true</Selecionada>
+      <SlicedFilter i:nil="true" />
+      <UsaCentroCusto>true</UsaCentroCusto>
+      <UsaTomador>false</UsaTomador>
+    </ColigadaSelecionada>
+  </SelColigadas>
+  <Selecao>
+    <Chapa xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <CodRecebimento>M</CodRecebimento>
+    <CodSituacao>AEFILPTUWY</CodSituacao>
+    <CodTipo>NZ</CodTipo>
+    <Contexto z:Ref="i2" />
+    <DataFimCompetencia>0001-01-01T00:00:00</DataFimCompetencia>
+    <ExibeSituacaoAdmissaoProxMes>true</ExibeSituacaoAdmissaoProxMes>
+    <FiltroGlobais z:Ref="i8" />
+    <FiltroGlobaisTemporario i:nil="true" />
+    <FiltroPerfil />
+    <FormulaSelecao />
+    <NaoPermiteCodSituacao i:nil="true" />
+    <NaoUsaCodReceb>false</NaoUsaCodReceb>
+    <NaoUsaSituacao>false</NaoUsaSituacao>
+    <NaoUsaTipoFunc>false</NaoUsaTipoFunc>
+    <SkipSecurity>false</SkipSecurity>
+    <UsaHstSituacao>false</UsaHstSituacao>
+  </Selecao>
+  <VersaoProduto>12.1.34.148</VersaoProduto>
+</FopParamsFolhaAnalitica>
