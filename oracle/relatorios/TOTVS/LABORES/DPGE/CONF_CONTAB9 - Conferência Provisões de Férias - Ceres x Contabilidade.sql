@@ -71,6 +71,15 @@ FROM
             tipodemissao,
             pfunc.codocorrencia                                 AS codsefip,
 
+
+
+
+
+
+
+
+            
+
 			   /* PROVISÃO DE FÉRIAS */
 
             ( pfh1.nroavosvencferdec + pfh1.nroavosproporcdec ) avos,

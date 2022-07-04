@@ -25,6 +25,10 @@ SELECT
     acrescimo_inss,
     porc_inss_empresa,
     ( porc_inss_empresa + acrescimo_inss )                                 AS inss_total,
+
+
+
+    
     saldo_anterior_inss13,
     valor_mensal_inss13,
     baixa_inss13,
@@ -60,6 +64,14 @@ FROM
             datademissao,
             tipodemissao,
             pfunc.codocorrencia    AS codsefip,
+
+
+
+
+
+
+
+
             CASE
                 WHEN codtipo = 'Z' THEN
                     2
