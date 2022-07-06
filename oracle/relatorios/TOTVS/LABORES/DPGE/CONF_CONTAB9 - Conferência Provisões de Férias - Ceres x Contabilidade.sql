@@ -69,16 +69,7 @@ FROM
             dttransferencia,
             datademissao,
             tipodemissao,
-            pfunc.codocorrencia                                 AS codsefip,
-
-
-
-
-
-
-
-
-            
+            pfunc.codocorrencia                                 AS codsefip,           
 
 			   /* PROVISÃO DE FÉRIAS */
 
